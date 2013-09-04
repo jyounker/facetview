@@ -338,24 +338,30 @@ search box - the end user will not know they are happening.
         var resdisplay = [
                 [
                     {
-                        "field": "author.name"
+                        "field": "Person"
+                    },
+                    {
+                    	"field": "Author.raw"	
+                    },
+                    {
+                    	"field": "Corporate"	
                     },
                     {
                         "pre": "(",
-                        "field": "year",
+                        "field": "Publishing_info",
                         "post": ")"
                     }
                 ],
                 [
                     {
                         "pre": "<strong>",
-                        "field": "title",
+                        "field": "Title_proper",
                         "post": "</strong>"
                     }
                 ],
                 [
                     {
-                        "field": "howpublished"
+                        "field": "Subject"
                     },
                     {
                         "pre": "in <em>",
@@ -406,7 +412,7 @@ search box - the end user will not know they are happening.
             "display_images": true,
             "search_url":"",
             "datatype":"jsonp",
-            "initialsearch":true,
+            "initialsearch": false,
             "fields": false,
             "partial_fields": false,
             "nested": [],

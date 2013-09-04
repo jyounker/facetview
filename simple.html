@@ -21,19 +21,14 @@
   <script type="text/javascript">
 jQuery(document).ready(function($) {
   $('.facet-view-simple').facetview({
-    search_url: 'http://bibsoup.net/query?',
+    search_url: 'http://localhost:9200/dcat/_search/',
     search_index: 'elasticsearch',
     facets: [
-        {'field': 'publisher.exact', 'size': 100, 'order':'term', 'display': 'publisher'},
-        {'field': 'author.name.exact', 'display': 'author'},
-        {'field': 'year.exact', 'display': 'year'},
-        {'field': 'collection.exact', 'display': 'collection'},
+        {'field': 'Author', 'display': 'author'},
+        {'field': 'Subject', 'size': 100, 'display': 'subject'},
     ],
     paging: {
       size: 10
-    },
-    predefined_filters: {
-        'owner.exact': {'term':{'owner.exact':'test'}}
     }
   });
 });
