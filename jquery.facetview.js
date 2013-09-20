@@ -341,7 +341,7 @@ search box - the end user will not know they are happening.
                         "field": "Person"
                     },
                     {
-                    	"field": "Author.raw"	
+                    	"field": "Author"	
                     },
                     {
                     	"field": "Corporate"	

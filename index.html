@@ -23,14 +23,11 @@
   <script type="text/javascript">
 jQuery(document).ready(function($) {
   $('.facet-view-simple').facetview({
-    search_url: 'http://localhost:9200/dcat/_search/?',
+    search_url: 'http://localhost:9200/brock/_search?',
     search_index: 'elasticsearch',
     facets: [
-        {'field':'Author.raw', 'display': 'Author'}, 
-        {'field':'Title_proper', 'display': 'Title'},
-        {'field':'Publishing_info', 'display': 'Publishing Info'},
-        {'field':'Subject', 'display': 'Subject'},
-        {'field':'Series', 'display': 'Series'}
+        {'field': 'Author', 'display': 'author'},
+        {'field': 'Subject', 'size': 100, 'display': 'subject'},
     ],
     paging: {
       from: 0,
